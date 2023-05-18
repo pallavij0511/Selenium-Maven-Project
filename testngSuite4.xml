@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="SuiteForDemo">
+  <test thread-count="5" name="TestSuiteDemo">
+	  <groups>
+		  <define name="Test Case Group 1">
+			  <include name="US101.regression"></include>
+			  <include name="US102.sanity"></include>
+			  
+		  </define>
+		  <define name="Test Case Group 2">
+			  <include name="US102.smoke"></include>
+		  </define>
+		  
+		  <run>
+			 <include name="Test Case Group 1"></include> 
+			 <include name="Test Case Group 2"></include>
+		  </run>
+	  </groups>
+    <classes>
+      <class name="groupingDemo.MetaGroup"/>
+    </classes>
+  </test> <!-- TestSuiteDemo -->
+</suite> <!-- SuiteForDemo -->
